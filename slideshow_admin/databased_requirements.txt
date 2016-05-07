@@ -1,0 +1,60 @@
+Author:  Steve North
+Author URI:  http://www.cs.nott.ac.uk/~pszsn/
+License: AGPLv3 or later
+License URI: http://www.gnu.org/licenses/agpl-3.0.en.html
+Can: Commercial Use, Modify, Distribute, Place Warranty
+Can't: Sublicence, Hold Liable
+Must: Include Copyright, Include License, State Changes, Disclose Source
+This research was originally funded in the UK under EPSRC grant reference EP/I031839/1 and title ‘Exploring the potential of networked urban screens for communities and culture’.
+
+Copyright (c) 2015, The University of Nottingham
+
+
+
+/****** mySQL database requirements for this to work ****
+
+MySQL database with entries for each media item in the store:
+
+Available fields:
+mediaFilename | likeCount | dateCreated | textLabel | location | appName | mediaType | personName |
+
+Note: mediaFilename is a unique key and only one media item with that name is allowed. 
+Note: the dateCreated field is an auto generated timestamp. Replacing an image with one of the same name, will overwrite the timestamp.
+
+MySQL query to create:
+CREATE TABLE `media` (
+`mediaFilename` varchar(200),
+`likeCount` int(11),
+`dateCreated` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+`textLabel` varchar(200),
+`location` varchar(200),
+`appName` varchar(200),
+`mediaType` varchar(200),
+`personName` varchar(200),  
+UNIQUE KEY (`mediaFilename`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+In addition, if you want to use the tag feature, a 'tags' table is required:
+
+MySQL database with entries for tag:
+
+Available fields:
+| mediaFilename | tag  | appName | categoryLabel |
+
+Note: each mediaFilename entry may be repeated with different tags, but each pair of mediaFilename and tag must be unique. 
+
+MySQL query to create:
+CREATE TABLE `tags` (
+ `mediaFilename` varchar(200),
+ `tag` varchar(200),
+ `appName` varchar(200),
+`categoryLabel` varchar(200),
+UNIQUE KEY (`mediaFilename`,`tag`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+***** mySQL database requirements for this to work ****/
+
+An empty table with this spec can be added to your database by importing the files: 
+media_table_structure_only.sql
+tags_table_structure_only.sql

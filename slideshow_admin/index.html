@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+
+<title>ScreenBase admin page</title>
+
+<script type="text/javascript">
+ 
+function getMedia()
+{
+xmlhttp=new XMLHttpRequest();
+xmlhttp.onreadystatechange=function()
+{
+
+console.log("Response is: "+xmlhttp.responseText);
+
+if (xmlhttp.readyState==4 && xmlhttp.status==200)
+{
+//console.log("Ready State Response is: "+xmlhttp.responseText);
+document.getElementById("databaseResponse").innerHTML=xmlhttp.responseText;
+}
+}
+xmlhttp.open("GET","getMediaData.php",true);
+
+xmlhttp.send();
+}
+
+
+function deleteMedia(mediaFilename)
+{
+var url = "deleteMedia.php";
+var params = "mediafilename="+mediaFilename; 
+
+console.log(params);
+
+xmlhttp=new XMLHttpRequest();
+
+xmlhttp.open("POST", url, true);
+
+//Send the proper header information along with the request
+xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xmlhttp.setRequestHeader("Content-length", params.length);
+xmlhttp.setRequestHeader("Connection", "close");
+
+xmlhttp.onreadystatechange=function()
+{
+
+if (xmlhttp.readyState==4 && xmlhttp.status==200)
+{
+//console.log("here");
+// Complete..
+window.location.reload(true);
+
+}
+}
+xmlhttp.send(params);
+
+}
+
+
+getMedia();
+
+</script>
+
+</head>
+
+
+<body>
+
+<H1>ScreenBase Admin</H1>
+
+<div id="databaseResponse"><b>Result from DB:</b></div>
+
+</body>

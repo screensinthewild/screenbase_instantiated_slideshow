@@ -1,0 +1,185 @@
+html, body {
+  width:  100%;
+  height: 100%;
+  background-color: #333;
+  overflow: hidden;
+}
+
+
+#button_panel 
+{   
+position: absolute;
+top: -5px;
+left: 570px;
+visibility: visible;
+z-index:1;
+}
+
+
+.button {
+		font-size:20px;
+		color:#FFFFFF;
+		text-align:center;
+	    border: 1px solid #FFFFFF;
+	    background: transparent;
+	}
+
+
+#top_row_image
+{
+position: absolute;
+visibility: hidden;
+}
+
+
+#info {
+position: absolute;
+visibility: hidden;
+width:  30%;
+height: 15%;
+}
+
+#like_button {
+position: absolute;
+visibility: hidden;
+width:  20%;
+height: 11%;
+}
+
+#like_heart_icon {
+position: absolute;
+visibility: hidden;
+}
+
+
+#message {
+position: absolute;
+  color: #FFFFFF;
+  cursor: default;
+  font-family: Helvetica, Verdana, sans-serif;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+
+#like_counter{
+position: absolute;
+  color: #FFFFFF;
+  cursor: default;
+  font-family: Helvetica, Verdana, sans-serif;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+
+
+#info_text {
+position: absolute;
+  color: #FFFFFF;
+  cursor: default;
+  font-family: Helvetica, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+
+#info_popup
+{
+	
+	top: 10px;
+	left: 50px;
+	position: absolute;
+	width:767px;
+	height:1360px;
+	background-color:black;
+	border: solid 2px #fff;
+	-moz-border-radius:15px;
+	-webkit-border-radius: 15px; 
+	-khtml-border-radius: 15px;
+	border-radius: 15px;
+	opacity:0.85;
+	padding:5px;
+	visibility: hidden;
+	z-index:2;
+}
+
+#iSpy_reserved_space
+{
+	top: 992px;
+	left: 2px;
+	position: absolute;
+	width:738px;
+	height:342px;
+	background-color:black;
+	border: solid 2px #fff;
+	-moz-border-radius:15px;
+	-webkit-border-radius: 15px; 
+	-khtml-border-radius: 15px;
+	border-radius: 15px;
+	opacity:0.5;
+	padding:5px;
+	visibility: hidden;
+	color: #FFFFFF;
+  font-family: Helvetica, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+#jcontainer
+{
+	
+	top: 1px;
+	 position: absolute;
+	width:767px;
+	height:1360px;
+	background-color:black;
+	border: solid 2px #fff;
+	-moz-border-radius:15px;
+	-webkit-border-radius: 15px; 
+	-khtml-border-radius: 15px;
+	border-radius: 15px;
+	
+	padding:5px;
+	
+}
+
+		#purr-container {
+			position: relative;
+			top: 0;
+			right: 0;
+		}
+		
+		.notice {
+			position: relative;
+			/* next bit does the overall width */
+			width: 300px;
+			/* next bit does the overall position */
+		//	top: 100px;
+		//	left: 250px;
+			top: -10px;
+			left: 448px;
+		}
+		
+	     /* Next bit adds a close cross at the top of the notification... */	
+		
+			.notice .close	{position: absolute; top: 12px; right: 12px; display: block; width: 18px; height: 17px; text-indent: -9999px; background: url(purrClose.png) no-repeat 0 10px;}
+	
+		.notice-body {
+		    
+			min-height: 50px;
+			padding: 22px 0 22px 22px;
+			background: url(purrTop.png) no-repeat left top;
+			color: #f9f9f9;
+		}
+			.notice-body img	{width: 50px; margin: 0 10px 0 0; float: left;}
+			.notice-body h3	{margin: 0; font-size: 1.1em;}
+			/* 4th margin value in next line sets border from left of notice */
+			/* font size also set in next line */
+			.notice-body p		{text-align:center; margin: 5px 5px 0 0px; font-size: 1.5em; line-height: 1.4em;font-family: Helvetica, Verdana, sans-serif;font-weight: bold;}
+		
+	
+		
+		.notice-bottom {
+			height: 22px;
+			background: url(purrBottom.png) no-repeat left top;
+		}
