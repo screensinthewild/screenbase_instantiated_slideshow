@@ -19,7 +19,7 @@ Consists of three modules: slideshow_display, slideshow_upload and slideshow_adm
 
 Supports three different types of slideshow.
 
-Supported by a mySQL database for persistant 'likes' and basic 'tags'.
+Supported by a mySQL database for persistent 'likes' and basic 'tags'.
 
 The database allows separate slideshows from the same media directory, using a database 'appName' field to filter the images. 
 
